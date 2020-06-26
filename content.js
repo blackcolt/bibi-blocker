@@ -10,9 +10,12 @@ $(function () {
 deleteAllBiBiMentions = function deleteAllBiBiMentions() {
     const divs = $("[role=article]");
     divs.each((index, div) => {
+        const $div = $(div);
         let text = $(div).text();
         if (text.includes("ביבי") || text.includes("נתניהו")) {
-            $(div).hide();
+            console.dir($div);
+            console.info(text);
+            $div.remove();
         }
         // $("[role=article] div span a").text("Idan Magled");
         // if (text.includes("איילת שקד")) {
